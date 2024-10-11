@@ -33,6 +33,9 @@
 		<java.version>17</java.version>
 		<lombok.version>1.18.34</lombok.version>
 		<postgresql.version>42.7.4</postgresql.version>
+		<mapstruct.version>1.6.2</mapstruct.version>
+		<hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
+		<jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
 	</properties>
 
 	<dependencies>
@@ -63,10 +66,29 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>${jakarta.validation-api.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -83,6 +105,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 
